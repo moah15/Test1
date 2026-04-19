@@ -21,7 +21,12 @@ class MainActivity : AppCompatActivity() {
 
         val textCount = findViewById<TextView>(R.id.textCount)
         val buttonReset = findViewById<Button>(R.id.buttonReset)
+        val buttonMinus = findViewById<Button>(R.id.buttonMinus)
 
+        buttonMinus.setOnClickListener {
+            count--
+            textCount.text = count.toString()
+        }
         buttonReset.setOnClickListener {
             count = 0
             textCount.text = count.toString()
